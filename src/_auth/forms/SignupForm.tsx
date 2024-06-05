@@ -15,7 +15,7 @@ import { useUserContext } from "@/context/AuthContext"
 
 
 const SignupForm = () => {
-  const { toast } = useToast()
+  const  { toast } = useToast();
   const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
   const navigate = useNavigate();
   const { mutateAsync: createUserAccount, isPending: isCreatingAccount } = useCreateUserAccount()
@@ -125,7 +125,7 @@ return (
           )}
         />
         <Button type="submit" className="shad-button_primary">
-           {isCreatingAccount ? (
+        {isCreatingAccount || isSigningIn || isUserLoading ? (
             <div className="flex-center gap-2">
                <Loader />    Please Wait...
             </div>
