@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input"
 import FileUploader from "../ui/shared/FileUploader";
-import Loader from "../ui/shared/Loader";
 import { PostValidation } from "@/lib/validation";
 import { useCreatePost, useUpdatePost } from "@/lib/react-query/queriesAndMutations";
 import { useUserContext } from "@/context/AuthContext";
